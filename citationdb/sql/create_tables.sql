@@ -56,16 +56,23 @@ CREATE TABLE  doughe38.organizations (
     );
 
 CREATE TABLE doughe38.papers (
-	paper_id int NOT NULL auto_increment,
-	title varchar(255),
+    paper_id int NOT NULL AUTO_INCREMENT,
+    title varchar(255),
     full_name varchar(255),
     date_written datetime,
-    source_id int,
     author_id int,
     PRIMARY KEY (paper_id),
-    CONSTRAINT FK_sources_paper FOREIGN KEY (source_id)
-    REFERENCES sources(source_id),
     CONSTRAINT fk_paper_author FOREIGN KEY (author_id)
     REFERENCES authors(author_id)
-    );
-    
+);
+
+
+    CREATE TABLE doughe38.paper_sources (
+    paper_id int,
+    source_id int,
+    PRIMARY KEY (paper_id, source_id),
+    CONSTRAINT fk_paper FOREIGN KEY (paper_id)
+    REFERENCES papers(paper_id),
+    CONSTRAINT fk_source FOREIGN KEY (source_id)
+    REFERENCES sources(source_id)
+);

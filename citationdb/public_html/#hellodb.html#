@@ -1,0 +1,18 @@
+
+
+<html>
+<head>
+</head>
+<?php
+	//connect
+	if (!include('connect.php')) {
+		die('error finding connect file');
+	}
+
+	$dbh = ConnectDB();
+?>
+	<div>
+			OH, SANTIANA GAINED THE DAY!
+			AWAY, 
+		</div>
+</html>
