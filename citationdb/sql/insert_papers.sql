@@ -47,6 +47,7 @@ INSERT INTO paper_sources (paper_id, source_id) VALUES
 (LAST_INSERT_ID(), 6),
 (LAST_INSERT_ID(), 12);
 
+
 INSERT INTO papers(title, full_name, date_written) VALUES
 ( 'The Role of Artificial Intelligence in Train Scheduling and Dispatch', 'Inspectah Deck', '2023-11-01');
 
